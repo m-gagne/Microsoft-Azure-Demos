@@ -1128,7 +1128,7 @@ body .markdown-body
 <ul>
 <li>Open a cmd prompt (or Git Bash)</li>
 <li>Run <code>git config --global user.email "you@example.com"</code></li>
-<li>Run <code>it config --global user.name "Your Name"</code></li>
+<li>Run <code>git config --global user.name "Your Name"</code></li>
 </ul>
 <h2 id="demo-script"><a name="user-content-demo-script" href="#demo-script" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Demo Script</h2>
 <h3 id="why-we-do-this-demo"><a name="user-content-why-we-do-this-demo" href="#why-we-do-this-demo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Why we do this demo</h3>
@@ -1144,7 +1144,7 @@ body .markdown-body
 <h3 id="demo-steps"><a name="user-content-demo-steps" href="#demo-steps" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Demo Steps</h3>
 <h4 id="step-1-create-a-website-with-integrated-source-control"><a name="user-content-step-1-create-a-website-with-integrated-source-control" href="#step-1-create-a-website-with-integrated-source-control" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Step 1: Create a Website with integrated source control</h4>
 <ul>
-<li>Log into Azure Portal</li>
+<li>Log into <a href="https://manage.windowsazure.com/microsoft.onmicrosoft.com">Azure Management Portal</a></li>
 <li>Click <code>+ New</code> &gt; <code>Website</code> &gt; <code>Quick Create</code> &amp; enter a unique site name such as <code>NodeDemoSite</code><ul>
 <li><em>Speaking Tip</em>: Although this only takes a few seconds I like to at this point mention that<ul>
 <li>Azure has behind the scenes setup a website in IIS for you either on your own dedicated server (when using standard) or on a shared server (when using basic/shared).</li>
@@ -1168,7 +1168,7 @@ body .markdown-body
 <p>To create your demo app</p>
 <ul>
 <li>Open a cmd prompt</li>
-<li>Navigate to a demo directory (I like to use c:\users\marcgagn\demos)</li>
+<li>Navigate to a demo directory (e.g. c:\demos)</li>
 <li>Run <code>express demo-app</code> where <code>demo-app</code> is the name (and directory) your app will be created in</li>
 <li>run <code>cd demo-app</code> to change into the newly created directory (which includes your demo app)</li>
 <li>run <code>npm install</code> to install package dependencies<ul>
@@ -1201,7 +1201,10 @@ body .markdown-body
 <li>Go back to your browser that is open to the <code>DEPLOYMENTS</code> tab in the portal.</li>
 <li>Scroll down to Step 3: &ldquo;Add remote Windows Azure repository and push your stuff&rdquo;</li>
 <li>Copy and run the two commands</li>
-<li>It will prompt you for your <a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-manage/#ftp-credentials">Azure deployment credentials</a>, enter your password and hit <code>&lt;enter&gt;</code></li>
+<li>It will prompt you for your Azure deployment credentials , enter your password and hit <code>&lt;enter&gt;</code><ul>
+<li>Not clear on Deployment Credentials? <a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-manage/#ftp-credentials">Documentation is here</a></li>
+</ul>
+</li>
 <li>At this point it should start pushing code to you Git repository connected to your Azure Website.</li>
 <li>It&rsquo;s a good idea to make sure your browser is visible as the <code>DEPLOYMENTS</code> page will update with status as the code is being commited and deployed<ul>
 <li><em>Speakers Notes</em>: Explain that the magic (aka Kudu Service) is making use of Git Hooks to detect that a push is occuring and to prepare for a new deployment. You can further explain that Kudu will then take the new code and automatically deploy it for you!</li>

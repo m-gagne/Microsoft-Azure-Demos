@@ -70,7 +70,7 @@ You will need to tell Git who you are (useful later when creating repositories a
 
 - Open a cmd prompt (or Git Bash)
 - Run `git config --global user.email "you@example.com"`
-- Run ` it config --global user.name "Your Name"`
+- Run `git config --global user.name "Your Name"`
 
 ## Demo Script
 
@@ -89,7 +89,7 @@ This short demo (~10 minutes) highlights a number of key features & strengths of
 
 #### Step 1: Create a Website with integrated source control
 
-- Log into Azure Portal
+- Log into [Azure Management Portal](https://manage.windowsazure.com/microsoft.onmicrosoft.com)
 - Click `+ New` > `Website` > `Quick Create` & enter a unique site name such as `NodeDemoSite`
 	- *Speaking Tip*: Although this only takes a few seconds I like to at this point mention that
 		- Azure has behind the scenes setup a website in IIS for you either on your own dedicated server (when using standard) or on a shared server (when using basic/shared).
@@ -107,7 +107,7 @@ There are a number of ways to do this, you can start with a fully baked app, you
 To create your demo app
 
 - Open a cmd prompt
-- Navigate to a demo directory (I like to use c:\users\marcgagn\demos)
+- Navigate to a demo directory (e.g. c:\demos)
 - Run `express demo-app` where `demo-app` is the name (and directory) your app will be created in
 - run `cd demo-app` to change into the newly created directory (which includes your demo app)
 - run `npm install` to install package dependencies
@@ -134,7 +134,8 @@ Back in your open browser is some instructions on how to add the Azure remote or
 - Go back to your browser that is open to the `DEPLOYMENTS` tab in the portal.
 - Scroll down to Step 3: "Add remote Windows Azure repository and push your stuff"
 - Copy and run the two commands
-- It will prompt you for your [Azure deployment credentials](http://azure.microsoft.com/en-us/documentation/articles/web-sites-manage/#ftp-credentials), enter your password and hit `<enter>`
+- It will prompt you for your Azure deployment credentials , enter your password and hit `<enter>`
+	- Not clear on Deployment Credentials? [Documentation is here](http://azure.microsoft.com/en-us/documentation/articles/web-sites-manage/#ftp-credentials)
 - At this point it should start pushing code to you Git repository connected to your Azure Website.
 - It's a good idea to make sure your browser is visible as the `DEPLOYMENTS` page will update with status as the code is being commited and deployed
 	- *Speakers Notes*: Explain that the magic (aka Kudu Service) is making use of Git Hooks to detect that a push is occuring and to prepare for a new deployment. You can further explain that Kudu will then take the new code and automatically deploy it for you!
