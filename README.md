@@ -14,3 +14,8 @@ To view within Github use the Markdown links.
 ## Azure Websites
 
 [HTML](Azure Websites/README.html) - [Markdown](Azure Websites/README.md)
+
+
+## Azure IaaS (Virtual Machines)
+
+[HTML](Azure IaaS/README.html) - [Markdown](Azure IaaS/README.md)
