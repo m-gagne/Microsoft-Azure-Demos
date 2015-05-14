@@ -1,7 +1,16 @@
-# Microsoft Azure Demos
+# Microsoft Azure Demo Scripts
 
-This repo contains various Microsoft Azure demos
+This repo contains a series of guides & scripts for demoing Microsoft Azure. 
 
-## Node.js, Git & Azure Websites
+## Usage
 
-This demo explains how to use git to deploy a Node.js Express web app to Azure Websites and how to use Azure's built in redeploy feature to revert bad deployments. 
+Clone this repo and open README.html to navigate the demos
+
+		git clone https://github.com/m-gagne/Microsoft-Azure-Demos.git .
+
+To view within Github use the Markdown links.
+
+
+## Azure Websites
+
+[HTML](Azure Websites/README.html) - [Markdown](Azure Websites/README.md)
