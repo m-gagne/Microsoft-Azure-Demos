@@ -1014,26 +1014,72 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>README</title></head><body><article class="markdown-body"><p><a href="../README.html">[Home]</a></p>
-<h1 id="microsoft-azure-iaas-presentation-demo-scripts"><a name="user-content-microsoft-azure-iaas-presentation-demo-scripts" href="#microsoft-azure-iaas-presentation-demo-scripts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Microsoft Azure IaaS Presentation &amp; Demo Scripts</h1>
-<p>This repo contains a series of guides &amp; scripts for demoing Microsoft Azure IaaS (Virtual Machines). </p>
-<h2 id="usage"><a name="user-content-usage" href="#usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Usage</h2>
-<p>Clone this repo and open README.html to navigate the demos</p>
-<h2 id="azure-iaas"><a name="user-content-azure-iaas" href="#azure-iaas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Azure IaaS</h2>
-<h3 id="topics-covered-are"><a name="user-content-topics-covered-are" href="#topics-covered-are" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Topics covered are</h3>
+</style><title>Add Data Disk</title></head><body><article class="markdown-body"><h1 id="add-data-disk"><a name="user-content-add-data-disk" href="#add-data-disk" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add Data Disk</h1>
+<h2 id="requirements"><a name="user-content-requirements" href="#requirements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Requirements</h2>
 <ul>
-<li>Virtual Machines</li>
-<li>Virtual Networks</li>
-<li>Availability Sets</li>
-<li>Storage</li>
-<li>Scaling</li>
+<li>Windows (or Linux) VM running</li>
 </ul>
-<h3 id="demos"><a name="user-content-demos" href="#demos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Demos</h3>
-<h4 id="creating-a-vm"><a name="user-content-creating-a-vm" href="#creating-a-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Creating a VM</h4>
-<p><a href="Demos/001%20-%20Provisioning%20VM/Provisioning%20VM%20-%20Current%20Portal.html">HTML</a> - <a href="Demos/001%20-%20Provisioning%20VM/Provisioning%20VM%20-%20Current%20Portal.md">Markdown</a></p>
-<h4 id="autoscaling-a-vm"><a name="user-content-autoscaling-a-vm" href="#autoscaling-a-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Autoscaling a VM</h4>
-<p><a href="Demos/002%20-%20Autoscaling%20VM/Autoscaling%20VM.html">HTML</a> - <a href="Demos/002%20-%20Autoscaling%20VM/Autoscaling%20VM.md">Markdown</a></p>
-<h4 id="azure-file-shares"><a name="user-content-azure-file-shares" href="#azure-file-shares" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Azure File Shares</h4>
-<p><a href="Demos/003 - Azure FileShare/Azure FileShare.html">HTML</a> - <a href="Demos/003%20-%20Azure%20FileShare/Azure%20FileShare.md">Markdown</a></p>
-<h4 id="azure-disk-attaching-a-disk-to-a-vm"><a name="user-content-azure-disk-attaching-a-disk-to-a-vm" href="#azure-disk-attaching-a-disk-to-a-vm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Azure Disk (Attaching a disk to a VM)</h4>
-<p><a href="Demos/004%20-%20Add%20Data%20Disk/Add%20Data%20Disk.html">HTML</a> - <a href="Demos/004%20-%20Add%20Data%20Disk/Add%20Data%20Disk.md">Markdown</a></p></article></body></html>
+<h2 id="demo"><a name="user-content-demo" href="#demo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Demo</h2>
+<ol>
+<li>Log into <a href="https://manage.windowsazure.com">Current Portal</a></li>
+<li>Click <code>Virtual Machines</code></li>
+<li>Click on a VM</li>
+<li>Click <code>DASHBOARD</code> (top nav)</li>
+<li>Click <code>ATACH</code> (bottom nav)</li>
+<li>Click <code>Attach empty disk</code></li>
+<li>Focus on <code>File Name</code><ul>
+<li><em>Speaker</em>:<ul>
+<li>Explain that you can customize the file name so for example you can call it <vm_name>-logs or <vm_name>-backups to give the drive meaning</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Focus on <code>Size (GB)</code> &amp; enter a size (e.g 200)<ul>
+<li><em>Speaker</em>:<ul>
+<li>Explain that you can configure the size of the drive up to ~1TB (1023 GB)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Focus on <code>HOST CACHE PREFERENCE</code><ul>
+<li><em>Speaker</em>:<ul>
+<li>Explain that this allows you to configure caching options for the attached drive. In some case caching read/writes improves IO performance and is by default enabled on OS drives.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="optional-demo-initialize-disk-in-windows"><a name="user-content-optional-demo-initialize-disk-in-windows" href="#optional-demo-initialize-disk-in-windows" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Optional Demo - Initialize Disk in Windows</h2>
+<p><strong>Tip:</strong> You can also have a RDP session waiting to go instead of logging in to speed up the demo.</p>
+<ol>
+<li>Click <code>CONNECT</code> (bottom nav) to RDP to the machine</li>
+<li>Log into the machine<ul>
+<li><strong>Tip:</strong> If you are on a domain joined machine click <code>User another accont</code> and enter &ldquo;\<your user name>&rdquo; to log into the system account and not your domain account.</li>
+</ul>
+</li>
+<li>Type <code>START+X</code> or right-click the start menu</li>
+<li>Click <code>Disk Management</code></li>
+<li>Click <code>OK</code> when prompted to <em>Initialize Disk</em></li>
+<li>Right-Click on your new Disk (likely named <code>Disk 2</code>)</li>
+<li>Click <code>New Simple Volume</code></li>
+<li>Click <code>Next</code> to start the wizard</li>
+<li>Click <code>Next</code> to accept the default size of the disk</li>
+<li>Click <code>Next</code> to accept the default drive letter</li>
+<li>Click <code>Next</code> to format as a NTFS drive</li>
+<li>Click <code>Finish</code> to complete the wizard</li>
+<li>Click the <code>Explorer</code> icon in the taskbard or hit <code>WindowsKey+E</code> to open the File Explorer</li>
+<li>Show that the drive is now available to use</li>
+</ol>
+<h2 id="optional-demo-detach-disk"><a name="user-content-optional-demo-detach-disk" href="#optional-demo-detach-disk" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Optional Demo - Detach Disk</h2>
+<ol>
+<li>Return to VM in Current Portal on the <code>DASHBOARD</code> screen.</li>
+<li>Click <code>DETACH DISK</code></li>
+<li>Click the <code>OK</code> checkmark icon to detach the disk<ul>
+<li><em>Speaker</em>:<ul>
+<li>Explain that you are not deleting the disk, but rather simple &ldquo;detaching&rdquo; it from the server. You can reattach it to the same or a different server or using a storage explorer delete the actual VHD disk.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Once the disk has been detached click <code>ATTACH</code> once again to show that you can easily re-attach the disk (since it wasn&rsquo;t deleted).</li>
+</ol></article></body></html>
