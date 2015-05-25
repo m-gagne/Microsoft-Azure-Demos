@@ -34,4 +34,4 @@ Clone this repo and open README.html to navigate the demos
 
 #### Azure Disk (Attaching a disk to a VM)
 
-[HTML](Demos\004 - Add Data Disk\Add Data Disk.html) - [Markdown](Demos\004 - Add Data Disk\Add Data Disk.md)
+[HTML](Demos/004 - Add Data Disk/Add Data Disk.html) - [Markdown](Demos/004 - Add Data Disk/Add Data Disk.md)
